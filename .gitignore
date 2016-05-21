@@ -1,7 +1,6 @@
 dependency-reduced-pom.xml
 target/
-users.xml
-userTest.xml
 .idea/
 *.iml
-nbactions.xml 
+nbactions.xml
+nb-configuration.xml

@@ -309,7 +309,7 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     * Visszaadja hogy az aktuális leget az első játékos nyerte
+     * Visszaadja hogy az aktuális leget az első játékos nyerte.
      * @return {@code true} vagy {@code false}
      */
     public static int getWinner1() {
@@ -317,7 +317,7 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     * Visszaadja hogy az aktuális leget a második játékos nyerte
+     * Visszaadja hogy az aktuális leget a második játékos nyerte.
      * @return {@code true} vagy {@code false}
      */
     public static int getWinner2() {
@@ -349,7 +349,7 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     * Visszaad egy {@code User}-t
+     * Visszaad egy {@code User}-t.
      * @return a játékos
      */
     public static User getPlayer1() {
@@ -357,7 +357,7 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     * Visszaad egy {@code User}-t
+     * Visszaad egy {@code User}-t.
      * @return a játékos
      */
     public static User getPlayer2() {

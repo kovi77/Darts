@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Reader.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Darts</a> &gt; <a href="index.source.html" class="el_package">hu.unideb.inf.darts</a> &gt; <span class="el_source">Reader.java</span></div><h1>Reader.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ * hu.unideb.inf.darts csomag magában tartalmazza a működéshez szükséges fájlokat.
+ */
+package hu.unideb.inf.darts;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+/**
+ * A beolvasást végző osztály.
+ * @author Ak
+ */
+<span class="nc" id="L30">public class Reader {</span>
+
+    /**
+     *{@code Users} objektum ami {@code User}-eket tartalmaz.
+     */
+<span class="nc" id="L35">    public static Users users = new Users();</span>
+<span class="nc" id="L36">    private CreateFolder cf = new CreateFolder();</span>
+<span class="nc" id="L37">    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(Reader.class);</span>
+    
+    /**
+     * A beolvasást végző metódus.
+     * @throws SAXException a beolvasás miatt
+     * @throws IOException a beolvasás miatt
+     */
+    public void read() throws SAXException, IOException {
+<span class="nc" id="L45">        users.setUsers(new ArrayList&lt;User&gt;());</span>
+<span class="nc" id="L46">        File file = new File(cf.getPath()+&quot;darts.xml&quot;);</span>
+        try {
+<span class="nc" id="L48">            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span>
+<span class="nc" id="L49">            DocumentBuilder builder = factory.newDocumentBuilder();</span>
+<span class="nc" id="L50">            Document doc = builder.parse(file);</span>
+<span class="nc" id="L51">            NodeList nodeList = doc.getElementsByTagName(&quot;user&quot;);</span>
+
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            for (int i = 0; i &lt; nodeList.getLength(); i++) {</span>
+<span class="nc" id="L54">                Node node = nodeList.item(i);</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                if (node.getNodeType() == Node.ELEMENT_NODE) {</span>
+
+<span class="nc" id="L57">                    Element elem = (Element) node;</span>
+
+<span class="nc" id="L59">                    users.getUsers().add(new User(elem.getElementsByTagName(&quot;name&quot;).item(0).getTextContent(),</span>
+<span class="nc" id="L60">                            Integer.parseInt(elem.getElementsByTagName(&quot;matches&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L61">                            Integer.parseInt(elem.getElementsByTagName(&quot;score&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L62">                            Double.parseDouble(elem.getElementsByTagName(&quot;highScore&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L63">                            Double.parseDouble(elem.getElementsByTagName(&quot;avg&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L64">                            Integer.parseInt(elem.getElementsByTagName(&quot;counter1&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L65">                            Integer.parseInt(elem.getElementsByTagName(&quot;counter2&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L66">                            Integer.parseInt(elem.getElementsByTagName(&quot;counter3&quot;).item(0).getTextContent()),</span>
+<span class="nc" id="L67">                            Integer.parseInt(elem.getElementsByTagName(&quot;wonMatches&quot;).item(0).getTextContent())</span>
+                    )
+                    );
+                }
+
+            }
+<span class="nc" id="L73">            logger.error(&quot;Beolvasás sikeres&quot;);</span>
+<span class="nc" id="L74">        } catch (ParserConfigurationException ex) {</span>
+<span class="nc" id="L75">            logger.error(&quot;Beolvasás sikertelen&quot;);</span>
+<span class="nc" id="L76">            Logger.getLogger(Darts.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L77">        }</span>
+        
+<span class="nc" id="L79">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

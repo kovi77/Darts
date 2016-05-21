@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>FXMLResults.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Darts</a> &gt; <a href="index.source.html" class="el_package">hu.unideb.inf.darts</a> &gt; <span class="el_source">FXMLResults.java</span></div><h1>FXMLResults.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hu.unideb.inf.darts;
+
+import hu.unideb.inf.darts.Darts;
+import hu.unideb.inf.darts.MainApp;
+import hu.unideb.inf.darts.Writer;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+import javax.xml.bind.JAXBException;
+import org.slf4j.LoggerFactory;
+
+/**
+ * FXML Controller class.
+ *
+ * @author Ak
+ */
+<span class="nc" id="L33">public class FXMLResults implements Initializable {</span>
+
+    @FXML
+    private Label nameP1;
+    @FXML
+    private Label nameP2;
+    @FXML
+    private Label matchesP1;
+    @FXML
+    private Label avgP1;
+    @FXML
+    private Label highScoreP1;
+    @FXML
+    private Label counter1P1;
+    @FXML
+    private Label counter2P1;
+    @FXML
+    private Label counter3P1;
+    @FXML
+    private Label matchesP2;
+    @FXML
+    private Label avgP2;
+    @FXML
+    private Label highScoreP2;
+    @FXML
+    private Label counter2P2;
+    @FXML
+    private Label counter3P2;
+
+    @FXML
+    private Label counter1P2;
+
+<span class="nc" id="L65">    private static Writer writer = new Writer();</span>
+
+<span class="nc" id="L67">    private ManagerImpl m = new ManagerImpl();</span>
+<span class="nc" id="L68">    private Darts darts = m.getDarts();</span>
+
+    @FXML
+    private Button newGame;
+    @FXML
+    private Rectangle rec1;
+    @FXML
+    private Rectangle rec2;
+    @FXML
+    private Label matchesP11;
+    @FXML
+    private Label matchesP21;
+    
+<span class="nc" id="L81">    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(FXMLResults.class);</span>
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+<span class="nc bnc" id="L87" title="All 2 branches missed.">        if (m.getWinner1() &gt; m.getWinner2()) {</span>
+<span class="nc" id="L88">            logger.info(&quot;1.Játékos nyert&quot;);</span>
+<span class="nc" id="L89">            rec2.setOpacity(0.2);</span>
+        }
+<span class="nc bnc" id="L91" title="All 2 branches missed.">        if (m.getWinner1() &lt; m.getWinner2()) {</span>
+<span class="nc" id="L92">            logger.info(&quot;2.Játékos nyert&quot;);</span>
+<span class="nc" id="L93">            rec1.setOpacity(0.2);</span>
+        }
+<span class="nc" id="L95">        m.setResults(m.getDarts());</span>
+<span class="nc" id="L96">        nameP1.setText(darts.getPlayer1().getName());</span>
+<span class="nc" id="L97">        nameP2.setText(darts.getPlayer2().getName());</span>
+<span class="nc" id="L98">        matchesP11.setText(Integer.toString(darts.getPlayer1().getMatches()));</span>
+<span class="nc" id="L99">        matchesP21.setText(Integer.toString(darts.getPlayer2().getMatches()));</span>
+<span class="nc" id="L100">        matchesP1.setText(Integer.toString(darts.getPlayer1().getWonMatches()));</span>
+<span class="nc" id="L101">        matchesP2.setText(Integer.toString(darts.getPlayer2().getWonMatches()));</span>
+<span class="nc" id="L102">        avgP1.setText(Double.toString(darts.getPlayer1().getAvg()));</span>
+<span class="nc" id="L103">        avgP2.setText(Double.toString(darts.getPlayer2().getAvg()));</span>
+<span class="nc" id="L104">        highScoreP1.setText(Double.toString(darts.getPlayer1().getHighScore()));</span>
+<span class="nc" id="L105">        highScoreP2.setText(Double.toString(darts.getPlayer2().getHighScore()));</span>
+<span class="nc" id="L106">        counter1P1.setText(Integer.toString(darts.getPlayer1().getCounter1()));</span>
+<span class="nc" id="L107">        counter1P2.setText(Integer.toString(darts.getPlayer2().getCounter1()));</span>
+<span class="nc" id="L108">        counter2P1.setText(Integer.toString(darts.getPlayer1().getCounter2()));</span>
+<span class="nc" id="L109">        counter2P2.setText(Integer.toString(darts.getPlayer2().getCounter2()));</span>
+<span class="nc" id="L110">        counter3P1.setText(Integer.toString(darts.getPlayer1().getCounter3()));</span>
+<span class="nc" id="L111">        counter3P2.setText(Integer.toString(darts.getPlayer2().getCounter3()));</span>
+
+<span class="nc" id="L113">    }</span>
+
+    @FXML
+    private void newGameAction(ActionEvent event) throws JAXBException, FileNotFoundException, IOException, URISyntaxException {
+<span class="nc" id="L117">        writer.write();</span>
+<span class="nc" id="L118">        logger.info(&quot;Új játék&quot;);</span>
+<span class="nc" id="L119">        MainApp.stage = (Stage) newGame.getScene().getWindow();</span>
+<span class="nc" id="L120">        MainApp.loader = new FXMLLoader(getClass().getResource(&quot;/fxml/optionsScene.fxml&quot;));</span>
+<span class="nc" id="L121">        MainApp.root = MainApp.loader.load();</span>
+<span class="nc" id="L122">        MainApp.loader.&lt;FXMLOptions&gt;getController();</span>
+<span class="nc" id="L123">        MainApp.scene = new Scene(MainApp.root);</span>
+<span class="nc" id="L124">        MainApp.stage.setScene(MainApp.scene);</span>
+<span class="nc" id="L125">        MainApp.stage.show();</span>
+<span class="nc" id="L126">    }</span>
+
+    @FXML
+    private void exitAction(ActionEvent event) throws JAXBException, FileNotFoundException, URISyntaxException {
+<span class="nc" id="L130">        writer.write();</span>
+<span class="nc" id="L131">        MainApp.stage.close();</span>
+<span class="nc" id="L132">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

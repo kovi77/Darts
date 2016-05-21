@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Login.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Darts</a> &gt; <a href="index.source.html" class="el_package">hu.unideb.inf.darts</a> &gt; <span class="el_source">Login.java</span></div><h1>Login.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hu.unideb.inf.darts;
+
+import java.util.ArrayList;
+import org.slf4j.LoggerFactory;
+
+/**
+ * {@code User}-eket beléptető osztály.
+ * @author Ak
+ */
+<span class="nc" id="L15">public class Login {</span>
+
+<span class="nc" id="L17">    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(Login.class);</span>
+<span class="nc" id="L18">    private Reader r = new Reader();</span>
+<span class="nc" id="L19">    private ManagerImpl m = new ManagerImpl();</span>
+<span class="nc" id="L20">    private static Users users = new Users();</span>
+<span class="nc" id="L21">    private String invalidName = &quot;&quot;;</span>
+<span class="nc" id="L22">    private boolean ch1 = false;</span>
+<span class="nc" id="L23">    private boolean ch2 = false;</span>
+<span class="nc" id="L24">    private boolean check1 = false;</span>
+<span class="nc" id="L25">    User player1 = m.getPlayer1();</span>
+<span class="nc" id="L26">    User player2 = m.getPlayer2();</span>
+
+    /**
+     * Beléptetést végző metódus.
+     * @param name1 egy {@code User} neve
+     * @param name2 egy {@code User} neve
+     */
+    public void login(String name1, String name2) {
+<span class="nc" id="L34">        ch1 = false;</span>
+<span class="nc" id="L35">        ch2 = false;</span>
+<span class="nc" id="L36">        users.setUsers(new ArrayList&lt;&gt;());</span>
+<span class="nc" id="L37">        users.setUsers(r.users.getUsers());</span>
+<span class="nc bnc" id="L38" title="All 6 branches missed.">        if (!name1.equals(name2) &amp;&amp; (!name1.isEmpty() &amp;&amp; !name2.isEmpty())) {</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">            for (User user : users.getUsers()) {</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">                if (user.getName().equals(name1)) {</span>
+<span class="nc" id="L41">                    player1.setName(user.getName());</span>
+<span class="nc" id="L42">                    player1.setAvg(user.getAvg());</span>
+<span class="nc" id="L43">                    player1.setHighScore(user.getHighScore());</span>
+<span class="nc" id="L44">                    player1.setMatches(user.getMatches());</span>
+<span class="nc" id="L45">                    player1.setCounter1(user.getCounter1());</span>
+<span class="nc" id="L46">                    player1.setCounter2(user.getCounter2());</span>
+<span class="nc" id="L47">                    player1.setCounter3(user.getCounter3());</span>
+<span class="nc" id="L48">                    player1.setWonMatches(user.getWonMatches());</span>
+<span class="nc" id="L49">                    ch1 = true;</span>
+<span class="nc" id="L50">                    logger.info(&quot;Regisztált játékos&quot;);</span>
+                }
+<span class="nc" id="L52">            }</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            for (User user : users.getUsers()) {</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                if (user.getName().equals(name2)) {</span>
+<span class="nc" id="L55">                    player2.setName(user.getName());</span>
+<span class="nc" id="L56">                    player2.setAvg(user.getAvg());</span>
+<span class="nc" id="L57">                    player2.setHighScore(user.getHighScore());</span>
+<span class="nc" id="L58">                    player2.setMatches(user.getMatches());</span>
+<span class="nc" id="L59">                    player2.setCounter1(user.getCounter1());</span>
+<span class="nc" id="L60">                    player2.setCounter2(user.getCounter2());</span>
+<span class="nc" id="L61">                    player2.setCounter3(user.getCounter3());</span>
+<span class="nc" id="L62">                    player2.setWonMatches(user.getWonMatches());</span>
+<span class="nc" id="L63">                    ch2 = true;</span>
+<span class="nc" id="L64">                    logger.info(&quot;Regisztált játékos&quot;);</span>
+                }
+<span class="nc" id="L66">            }</span>
+<span class="nc" id="L67">            invalidName = &quot;&quot;;</span>
+<span class="nc bnc" id="L68" title="All 4 branches missed.">            check1 = ch2 &amp;&amp; ch1;</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">            if (!ch1) {</span>
+<span class="nc" id="L70">                invalidName = &quot;Player 1 not registered&quot;;</span>
+<span class="nc" id="L71">                logger.warn(&quot;Első játékos nem regisztált&quot;);</span>
+            }
+<span class="nc bnc" id="L73" title="All 2 branches missed.">            if (!ch2) {</span>
+<span class="nc" id="L74">                invalidName = &quot;Player 2 not registered&quot;;</span>
+<span class="nc" id="L75">                logger.warn(&quot;Második játékos nem regisztált&quot;);</span>
+            }
+<span class="nc bnc" id="L77" title="All 4 branches missed.">            if (!ch1 &amp;&amp; !ch2) {</span>
+<span class="nc" id="L78">                invalidName = &quot;Non-registered players&quot;;</span>
+<span class="nc" id="L79">                logger.warn(&quot;Nem regisztált játékosok&quot;);</span>
+            }
+        } else {
+<span class="nc" id="L82">            invalidName = &quot;Invalid Name&quot;;</span>
+<span class="nc" id="L83">            logger.warn(&quot;Hibás bejelentkezési próba&quot;);</span>
+        }
+
+<span class="nc" id="L86">    }</span>
+
+    /**
+     * Visszaadja nem érvényes név esetén adott üzenetet.
+     * @return invalidName {@code String}
+     */
+    public String getInvalidName() {
+<span class="nc" id="L93">        return invalidName;</span>
+    }
+
+    /**
+     * Visszaadja hogy a belépés során nem megegyező a név, és nem üresek.
+     * @return check1 {@code boolean}
+     */
+    public boolean isCheck1() {
+<span class="nc" id="L101">        return check1;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

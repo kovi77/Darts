@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Login.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Manager.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Reader.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLRegistration.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLStart.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLOptions.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/ManagerImpl.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLGameOnScene.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Registration.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/CreateFolder.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/MainApp.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/User.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/package-info.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLResults.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/FXMLLogin.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Writer.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Darts.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/java/hu/unideb/inf/darts/Users.java">
+</file>
+<file name="/home/adam/P/Darts/src/main/resources/tinylog.properties">
+</file>
+</checkstyle>

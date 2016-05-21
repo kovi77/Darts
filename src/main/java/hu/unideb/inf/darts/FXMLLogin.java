@@ -25,7 +25,7 @@ import javax.xml.bind.JAXBException;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * FXML Controller class.
  * @author Ak
  */
 public class FXMLLogin implements Initializable {

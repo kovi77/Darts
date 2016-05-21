@@ -17,7 +17,7 @@ import javax.xml.bind.Marshaller;
 import org.slf4j.LoggerFactory;
 
 /**
- *Mappa létrhozásának osztálya.
+ * Mappa létrhozásának osztálya.
  * @author Ak
  */
 public class CreateFolder {
@@ -60,8 +60,8 @@ public class CreateFolder {
     }
 
     /**
-     *
-     * @return path könyvtár elérési útvonalal tér vissza
+     * Visszaadja a könyvtár elérési útvonalát.
+     * @return path útvonal
      */
     public String getPath() {
         return path;

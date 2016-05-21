@@ -24,20 +24,20 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * A beolvasást végző osztály.
  * @author Ak
  */
 public class Reader {
 
     /**
-     *felhasználók.
+     *{@code Users} objektum ami {@code User}-eket tartalmaz.
      */
     public static Users users = new Users();
     private CreateFolder cf = new CreateFolder();
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(Reader.class);
     
     /**
-     *
+     * A beolvasást végző metódus.
      * @throws SAXException a beolvasás miatt
      * @throws IOException a beolvasás miatt
      */

@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * A felhasználók adatszerkezetét reprezentáló osztály.
+ * A {@code User}-ek adatszerkezetét reprezentáló osztály.
  * @author Ak
  */
 @XmlRootElement(name = "users")
@@ -23,13 +23,13 @@ public class Users {
     private List<User> users = null;
 
     /**
-     * Üres konstruktor a Users objektumhoz.
+     * Üres konstruktor a {@code User} objektumhoz.
      */
     public Users() {
     }
 
     /**
-     * Visszaadja a felhasználókat egy listában.
+     * Visszaadja a {@code User}-et egy listában.
      * @return felhasználók
      */
     public List<User> getUsers() {

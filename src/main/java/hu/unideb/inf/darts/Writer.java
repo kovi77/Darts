@@ -17,7 +17,7 @@ import javax.xml.bind.Marshaller;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * Az írást végző osztály.
  * @author Ak
  */
 public class Writer {
@@ -32,7 +32,7 @@ public class Writer {
     private CreateFolder cf = new CreateFolder();
 
     /**
-     *
+     * Az írást végző metódus.
      * @throws JAXBException a kiiratás miatt
      */
     public void write() throws JAXBException {

@@ -24,13 +24,13 @@ public class User {
     private int wonMatches = 0;
 
     /**
-     * Paraméter nélküli kontstruktor @{code User} objektumhoz.
+     * Paraméter nélküli kontstruktor {@code User} objektumhoz.
      */
     public User() {
     }
 
     /**
-     * Konstruktor a User objektumhoz.
+     * Konstruktor a {@code User} objektumhoz.
      * @param name egy játékos neve
      */
     public User(String name) {
@@ -46,7 +46,7 @@ public class User {
     }
 
     /**
-     * Konstruktor a User objektumhoz.
+     * Konstruktor a {@code User} objektumhoz.
      * @param name egy játékos neve
      * @param matches egy játszott meccsek száma
      * @param score egy aktuális pontszáma
@@ -71,7 +71,7 @@ public class User {
 
     /**
      * Visszaadja a nyert legek számát.
-     * @return nyert legek darabszáma
+     * @return darabszáma
      */
     public int getWonMatches() {
         return wonMatches;
@@ -79,7 +79,7 @@ public class User {
 
     /**
      * Beállítja a nyert legek számát.
-     * @param wonMatches nyert legek darabszáma
+     * @param wonMatches darabszáma
      */
     public void setWonMatches(int wonMatches) {
         this.wonMatches = wonMatches;
@@ -87,7 +87,7 @@ public class User {
 
     /**
      * Visszaadja a játékos nevét.
-     * @return játékos neve
+     * @return név
      */
     public String getName() {
         return name;
@@ -95,23 +95,23 @@ public class User {
 
     /**
      * Beállítja a játékos nevét.
-     * @param name  a játékos neve
+     * @param name  név
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Visszaadja a játékos által játszott meccsek darabszámát.
-     * @return játékos által játszott meccesk darabszáma
+     * Visszaadja a {@code User} által játszott meccsek darabszámát.
+     * @return darabszáma
      */
     public int getMatches() {
         return matches;
     }
 
     /**
-     * Beállítja a játékos által játszott meccsek darabszámát.
-     * @param matches meccesk darabszáma
+     * Beállítja a {@code User} által játszott meccsek darabszámát.
+     * @param matches darabszáma
      */
     public void setMatches(int matches) {
         this.matches = matches;
@@ -119,7 +119,7 @@ public class User {
 
     /**
      * Visszaadja a játékos aktuális pontszámát.
-     * @return aktuális pontszám
+     * @return pontszám
      */
     public int getScore() {
         return score;
@@ -127,46 +127,46 @@ public class User {
 
     /**
      * Beállítja a játékos aktuális pontszámát.
-     * @param score aktuális pontszám
+     * @param score pontszám
      */
     public void setScore(int score) {
         this.score = score;
     }
 
     /**
-     * Visszaadja a játékos átlagát.
-     * @return átlaga
+     * Visszaadja a {@code User} átlagát.
+     * @return átlag {@code double}
      */
     public double getAvg() {
         return avg;
     }
 
     /**
-     * Beállítja a játékos átlagát.
-     * @param avg átlaga
+     * Beállítja a {@code User} átlagát.
+     * @param avg átlag {@code double}
      */
     public void setAvg(double avg) {
         this.avg = avg;
     }
 
     /**
-     * Visszaadja a játékos legmagasabb dobását.
-     * @return dobott érték
+     * Visszaadja a {@code User} legmagasabb dobását.
+     * @return érték
      */
     public double getHighScore() {
         return highScore;
     }
 
     /**
-     * Beállítja a játékos legmagasabb dobását.
-     * @param highScore dobott érték
+     * Beállítja a {@code User} legmagasabb dobását.
+     * @param highScore érték
      */
     public void setHighScore(double highScore) {
         this.highScore = highScore;
     }
 
     /**
-     * Visszaadja a játékos által dobott 180-ak számát.
+     * Visszaadja a {@code User} által dobott 180-ak számát.
      * @return darabszáma
      */
     public int getCounter1() {
@@ -174,7 +174,7 @@ public class User {
     }
 
      /**
-     * Beállítja a játékos által dobott 180-ak számát.
+     * Beállítja a {@code User} által dobott 180-ak számát.
      * @param counter1 darabszám
      */
     public void setCounter1(int counter1) {
@@ -182,7 +182,7 @@ public class User {
     }
 
      /**
-     * Visszaadja a játékos által 140 felett dobot értékek darabszámát.
+     * Visszaadja a {@code User} által 140 felett dobot értékek darabszámát.
      * @return darabszáma
      */
     public int getCounter2() {
@@ -190,7 +190,7 @@ public class User {
     }
 
     /**
-     * Beállítja a játékos álatal dobot 140 feletti értékek darabszámát.
+     * Beállítja a játékos {@code User} dobot 140 feletti értékek darabszámát.
      * @param counter2 140 feletti dobás érték darabszáma
      */
     public void setCounter2(int counter2) {
@@ -198,7 +198,7 @@ public class User {
     }
 
     /**
-     * Visszaadja a játékos által 100 felett dobot értékek darabszámát.
+     * Visszaadja a {@code User} által 100 felett dobot értékek darabszámát.
      * @return darabszáma
      */
     public int getCounter3() {
@@ -206,7 +206,7 @@ public class User {
     }
 
     /**
-     * Beállítja a játékos álatal dobot 100 feletti értékek darabszámát.
+     * Beállítja a {@code User} álatal dobot 100 feletti értékek darabszámát.
      * @param counter3 darabsám
      */
     public void setCounter3(int counter3) {

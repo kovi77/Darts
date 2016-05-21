@@ -15,7 +15,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 /**
- *
+ * FXML Controller class.
  * @author Ak
  */
 public class FXMLStart {

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * {@code User}-eket beléptető osztály.
  * @author Ak
  */
 public class Login {
@@ -26,9 +26,9 @@ public class Login {
     User player2 = m.getPlayer2();
 
     /**
-     *
-     * @param name1 Egy felhasználó név
-     * @param name2 Egy másik felhasználó név
+     * Beléptetést végző metódus.
+     * @param name1 egy {@code User} neve
+     * @param name2 egy {@code User} neve
      */
     public void login(String name1, String name2) {
         ch1 = false;
@@ -86,16 +86,16 @@ public class Login {
     }
 
     /**
-     *
-     * @return nem érvényes név esetén ezzel tér vissza
+     * Visszaadja nem érvényes név esetén adott üzenetet.
+     * @return invalidName {@code String}
      */
     public String getInvalidName() {
         return invalidName;
     }
 
     /**
-     *
-     * @return check1
+     * Visszaadja hogy a belépés során nem megegyező a név, és nem üresek.
+     * @return check1 {@code boolean}
      */
     public boolean isCheck1() {
         return check1;

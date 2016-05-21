@@ -1,7 +1,7 @@
 
 package hu.unideb.inf.darts;
 /**
- * Egy darts jatákot reprezentáló osztály.
+ * Egy {@code Darts} jatákot reprezentáló osztály.
  * @author Ak
  */
 public class Darts {
@@ -12,7 +12,7 @@ public class Darts {
     private int legs;
 
     /**
-     * Paraméter nélküli kontstruktor @{code Darts} objektumhoz.
+     * Paraméter nélküli kontstruktor {@code Darts} objektumhoz.
      */
     public Darts() {
         this.p1 = null;
@@ -22,9 +22,9 @@ public class Darts {
     }
 
     /**
-     * Konstruktor @{code Darts} objektumhoz.
-     * @param p1 az első felhasználó ami egy @{code User} objektum
-     * @param p2 a második felhasználó ami egy @{code User} objektum
+     * Konstruktor {@code Darts} objektumhoz.
+     * @param p1 az első felhasználó ami egy {@code User} objektum
+     * @param p2 a második felhasználó ami egy {@code User} objektum
      * @param gameMode egy játák mód
      * @param legs legek darabszáma
      */
@@ -49,7 +49,7 @@ public class Darts {
     }
 
     /**
-     * Beállítja a @{code Darts}-hoz a legek darabszámát.
+     * Beállítja a {@code Darts}-hoz a legek darabszámát.
      * @param legs legek darabszáma
      */
     public void setLegs(int legs) {
@@ -57,7 +57,7 @@ public class Darts {
     }
 
     /**
-     * Visszaadja az első játékost.
+     * Visszaadja az első {@code User}-t.
      * @return az első felhasználó
      */
     public User getPlayer1() {
@@ -65,7 +65,7 @@ public class Darts {
     }
 
     /**
-     * Beállítja az első @{code Darts} játékost.
+     * Beállítja az első {@code Darts} {@code User}-ét.
      * @param p1 egy felhasználó
      */
     public void setPlayer1(User p1) {
@@ -73,7 +73,7 @@ public class Darts {
     }
 
     /**
-     * Visszaadja a második játékost.
+     * Visszaadja a második {@code User}-t.
      * @return a második felhasználó
      */
     public User getPlayer2() {
@@ -81,7 +81,7 @@ public class Darts {
     }
 
     /**
-     * Beállítja a második @{code Darts} játékost.
+     * Beállítja a második {@code Darts} {@code User}-ét.
      * @param p2 egy felhasználó
      */
     public void setPlayer2(User p2) {
@@ -89,7 +89,7 @@ public class Darts {
     }
 
     /**
-     * Visszaadja a @{code Darts} játék típusát.
+     * Visszaadja a {@code Darts} játék típusát.
      * @return a jázék típusa
      */
     public String getGameMode() {
@@ -97,7 +97,7 @@ public class Darts {
     }
 
     /**
-     * Beállítja a @{code Darts} játék típusát.
+     * Beállítja a {@code Darts} játék típusát.
      * @param gameMode egy játék típus
      */
     public void setGameMode(String gameMode) {

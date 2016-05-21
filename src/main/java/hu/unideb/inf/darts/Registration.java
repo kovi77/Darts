@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * A regisztrációt végző osztály.
  * @author Ak
  */
 public class Registration {
@@ -27,16 +27,16 @@ public class Registration {
     private Reader rd = new Reader();
 
     /**
-     *
-     * @return Nem érvényes név esetén egy Stringel.
+     * Visszaadja nem érvényes név esetén adott üzenetet.
+     * @return invalidName {@code String}
      */
     public String getInvalidName() {
         return invalidName;
     }
 
     /**
-     *
-     * @param name Egy név
+     * A regisztációt végző metódus.
+     * @param name Egy {@code User} neve.
      * @throws JAXBException Írás és olvsás miatt
      * @throws SAXException Írás és olvsás miatt
      * @throws IOException Írás és olvsás miatt

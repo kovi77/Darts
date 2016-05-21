@@ -11,29 +11,28 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ * A {@code Darts} játék Main osztálya.
  * @author Ak
  */
 public class MainApp extends Application {
 
     /**
-     * stage.
+     * Stage.
      */
     public static Stage stage;
-    //ne statikusak legyenek
 
     /**
-     * root.
+     * Root.
      */
     public static Parent root;
 
     /**
-     * loader.
+     * Loader.
      */
     public static FXMLLoader loader;
 
     /**
-     * scene.
+     * Scene.
      */
     public static Scene scene;
 

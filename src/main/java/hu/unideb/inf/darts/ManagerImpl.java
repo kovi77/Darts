@@ -251,9 +251,9 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     *
-     * @param darts
-     * @return
+     * Beállítja ki nyerte a leget, majd hogy ki nyerte a meccset.
+     * @param darts egy darts
+     * @return a meccs végét jelző értékkel.
      */
     public boolean win(Darts darts) {
         if (darts.getLegs() != 1) {
@@ -301,72 +301,72 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     *
-     * @return meccs végét jelző értékkel tér vissza
+     * Meccs végét jelző értékkel tér vissza.
+     * @return {@code true} vagy {@code false}
      */
     public boolean getWin() {
         return win;
     }
 
     /**
-     *
-     * @return az aktuális leget az első játékos nyerte
+     * Visszaadja hogy az aktuális leget az első játékos nyerte
+     * @return {@code true} vagy {@code false}
      */
     public static int getWinner1() {
         return winner1;
     }
 
     /**
-     *
-     * @return az aktuális leget az második játékos nyerte
+     * Visszaadja hogy az aktuális leget a második játékos nyerte
+     * @return {@code true} vagy {@code false}
      */
     public static int getWinner2() {
         return winner2;
     }
 
     /**
-     *
-     * @return darts
+     * Visszaadja az adott {@code Darts}-ot.
+     * @return a darts
      */
     public Darts getDarts() {
         return darts;
     }
 
     /**
-     *
-     * @return az első négyzet átlátszóságának értékével tér vissza
+     * Visszaadja az első négyzet átlátszóságának értékével.
+     * @return egy {@code double} érték
      */
     public double getOp1() {
         return op1;
     }
 
     /**
-     *
-     * @return a második négyzet átlátszóságának értékével tér vissza
+     * Visszaadja a második négyzet átlátszóságának értékével.
+     * @return egy {@code double} érték
      */
     public double getOp2() {
         return op2;
     }
 
     /**
-     *
-     * @return
+     * Visszaad egy {@code User}-t
+     * @return a játékos
      */
     public static User getPlayer1() {
         return player1;
     }
 
     /**
-     *
-     * @return
+     * Visszaad egy {@code User}-t
+     * @return a játékos
      */
     public static User getPlayer2() {
         return player2;
     }
 
     /**
-     *
-     * @param win
+     * Beállítja a játék végét jelző értéket.
+     * @param win {@code true} vagy {@code false}
      */
     public void setWin(boolean win) {
         this.win = win;

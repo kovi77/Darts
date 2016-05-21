@@ -7,44 +7,44 @@ package hu.unideb.inf.darts;
 
 
 /**
- *
+ *  {@code ManagerImpl} osztály interfésze.
  * @author Ak
  */
 public interface Manager {
 
     /**
-     *
+     * Beállítja a {@code Darts} kezdő {@code User}-ét.
      * @param playerOptions a kezdő játékos neve
-     * @param player1
-     * @param player2
-     * @param darts
+     * @param player1 egy játékos
+     * @param player2 egy játékos
+     * @param darts egy darts
      */
     public void setPlayer(String playerOptions,User player1, User player2,Darts darts);
 
     /**
-     *
+     * Beállítja a {@code Darts} kezdőpont számát.
      * @param scoreOptions kezdő pontszám értéke
-     * @param darts
+     * @param darts egy darts
      */
     public void options(String scoreOptions,Darts darts);
 
     /**
-     *
-     * @param legs játszani kívánt legek száma
-     * @param darts
+     * Beállítja hány legből álljon egy {@code Darts}.
+     * @param legs legek száma
+     * @param darts egy darts
      */
     public void setLeg(String legs,Darts darts);
 
     /**
-     *
-     * @param num az dobot pontszám
-     * @param darts
+     * Beállítja az aktuális {@code User} pontszámát, levezeti a játék menetét.
+     * @param num egy pontszám
+     * @param darts egy darts
      */
     public void calc(int num,Darts darts);
  
     /**
-     * beállítja a végeredményt.
-     * @param darts
+     * Beállítja a végeredményt.
+     * @param darts egy darts
      */
     public void setResults(Darts darts); 
 }

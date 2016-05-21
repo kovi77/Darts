@@ -89,7 +89,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>hu.unideb.inf.darts.controller.MainApp</mainClass>
+                            <mainClass>hu.unideb.inf.darts.MainApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -217,7 +217,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>hu.unideb.inf.darts.controller.MainApp</mainClass>
+                                    <mainClass>hu.unideb.inf.darts.MainApp</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

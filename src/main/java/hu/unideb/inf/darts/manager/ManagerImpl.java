@@ -2,8 +2,10 @@
 /**
  * hu.unideb.inf.darts csomag magában tartalmazza a működéshez szükséges fájlokat.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.manager;
 
+import hu.unideb.inf.darts.model.Darts;
+import hu.unideb.inf.darts.model.User;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -13,8 +15,8 @@ import org.slf4j.LoggerFactory;
 public class ManagerImpl implements Manager {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(ManagerImpl.class);
     static Darts darts = new Darts();
-    static User player1 = new User("A");
-    static User player2 = new User("B");
+    public static User player1 = new User("A");
+    public static User player2 = new User("B");
 
     private int p1Counter = 1;
     private int p2Counter = 5;

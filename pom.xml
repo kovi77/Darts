@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>Darts</artifactId>
+    <artifactId>Darts-1.1</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Darts</name>
+    <name>Darts-1.1</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>hu.unideb.inf.darts.MainApp</mainClass>
+        <mainClass>hu.unideb.inf.darts.controller.MainApp</mainClass>
     </properties>
     <description>Debreceni Egyetem programtervező szak 
         programozás technologiák tantárgy beadandó dolgozata.</description>
@@ -89,7 +89,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>hu.unideb.inf.darts.MainApp</mainClass>
+                            <mainClass>hu.unideb.inf.darts.controller.MainApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -217,7 +217,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>hu.unideb.inf.darts.MainApp</mainClass>
+                                    <mainClass>hu.unideb.inf.darts.controller.MainApp</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

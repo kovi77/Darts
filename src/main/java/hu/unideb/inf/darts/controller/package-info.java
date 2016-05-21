@@ -17,4 +17,4 @@
 /**
  * A {@code Darts} játékhoz szükséges osztályokat tartalmazza.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;

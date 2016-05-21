@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
-import hu.unideb.inf.darts.Darts;
-import hu.unideb.inf.darts.MainApp;
-import hu.unideb.inf.darts.Writer;
+import hu.unideb.inf.darts.model.Darts;
+import hu.unideb.inf.darts.model.Darts;
+import hu.unideb.inf.darts.manager.ManagerImpl;
+import hu.unideb.inf.darts.manager.Writer;
+import hu.unideb.inf.darts.manager.Writer;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -117,11 +119,11 @@ public class FXMLResults implements Initializable {
         writer.write();
         logger.info("Új játék");
         MainApp.stage = (Stage) newGame.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/optionsScene.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLOptions>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/optionsScene.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLOptions>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
 

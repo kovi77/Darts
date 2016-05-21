@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
-import hu.unideb.inf.darts.MainApp;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,22 +27,22 @@ public class FXMLStart {
     @FXML
     private void loginAction(ActionEvent event) throws IOException {
         MainApp.stage = (Stage) loginButton.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/loginScene.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLGameOnScene>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/loginScene.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLGameOnScene>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
 
     @FXML
     private void registrationAction(ActionEvent event) throws IOException {
         MainApp.stage = (Stage) registrationButton.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/registrationScene.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLGameOnScene>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/registrationScene.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLGameOnScene>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
     

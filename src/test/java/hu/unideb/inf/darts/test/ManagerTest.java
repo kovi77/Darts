@@ -1,6 +1,6 @@
 package hu.unideb.inf.darts.test;
 
-import hu.unideb.inf.darts.ManagerImpl;
+import hu.unideb.inf.darts.manager.ManagerImpl;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

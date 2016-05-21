@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
-import hu.unideb.inf.darts.CreateFolder;
-import hu.unideb.inf.darts.Login;
-import hu.unideb.inf.darts.MainApp;
-import hu.unideb.inf.darts.Reader;
+import hu.unideb.inf.darts.manager.CreateFolder;
+import hu.unideb.inf.darts.manager.Login;
+import hu.unideb.inf.darts.manager.Reader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,11 +52,11 @@ public class FXMLLogin implements Initializable {
         plsFillLabel.setText(l.getInvalidName());
         if (l.isCheck1()) {
             MainApp.stage = (Stage) loginButton.getScene().getWindow();
-            MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/optionsScene.fxml"));
-            MainApp.root = MainApp.loader.load();
-            MainApp.loader.<FXMLOptions>getController();
-            MainApp.scene = new Scene(MainApp.root);
-            MainApp.stage.setScene(MainApp.scene);
+            MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/optionsScene.fxml")));
+            MainApp.setRoot(MainApp.getLoader().load());
+            MainApp.getLoader().<FXMLOptions>getController();
+            MainApp.setScene(new Scene(MainApp.getRoot()));
+            MainApp.stage.setScene(MainApp.getScene());
             MainApp.stage.show();
         }
     }
@@ -71,11 +70,11 @@ public class FXMLLogin implements Initializable {
     @FXML
     private void backAction(ActionEvent event) throws IOException {
         MainApp.stage = (Stage) backButton.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/start.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLOptions>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/start.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLOptions>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
 }

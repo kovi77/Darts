@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.manager;
 
+import hu.unideb.inf.darts.model.User;
+import hu.unideb.inf.darts.model.Users;
 import java.util.ArrayList;
 import org.slf4j.LoggerFactory;
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.darts.FXMLOptions">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.darts.controller.FXMLOptions">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="27.0" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="600.0" />
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="27.0" prefHeight="17.0" prefWidth="600.0" text="Options" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">

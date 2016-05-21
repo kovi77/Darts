@@ -1,7 +1,7 @@
 /**
  * hu.unideb.inf.darts csomag magában tartalmazza a működéshez szükséges fájlokat.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -24,27 +24,69 @@ public class MainApp extends Application {
     /**
      * Root.
      */
-    public static Parent root;
+    private static Parent root;
 
     /**
      * Loader.
      */
-    public static FXMLLoader loader;
+    private static FXMLLoader loader;
 
     /**
      * Scene.
      */
-    public static Scene scene;
+    private static Scene scene;
+
+    /**
+     * @return the root
+     */
+    public static Parent getRoot() {
+        return root;
+    }
+
+    /**
+     * @param aRoot the root to set
+     */
+    public static void setRoot(Parent aRoot) {
+        root = aRoot;
+    }
+
+    /**
+     * @return the loader
+     */
+    public static FXMLLoader getLoader() {
+        return loader;
+    }
+
+    /**
+     * @param aLoader the loader to set
+     */
+    public static void setLoader(FXMLLoader aLoader) {
+        loader = aLoader;
+    }
+
+    /**
+     * @return the scene
+     */
+    public static Scene getScene() {
+        return scene;
+    }
+
+    /**
+     * @param aScene the scene to set
+     */
+    public static void setScene(Scene aScene) {
+        scene = aScene;
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
-        root = FXMLLoader.load(getClass().getResource("/fxml/start.fxml"));
+        setRoot(FXMLLoader.load(getClass().getResource("/fxml/start.fxml")));
 
-        scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Styles.css");
+        setScene(new Scene(getRoot()));
+        getScene().getStylesheets().add("/styles/Styles.css");
 
         stage.setTitle("DARTS SCOREBOARD");
-        stage.setScene(scene);
+        stage.setScene(getScene());
         stage.show();
     }
 

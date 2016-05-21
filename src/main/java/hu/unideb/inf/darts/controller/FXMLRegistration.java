@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
-import hu.unideb.inf.darts.CreateFolder;
-import hu.unideb.inf.darts.MainApp;
-import hu.unideb.inf.darts.Reader;
-import hu.unideb.inf.darts.Registration;
+import hu.unideb.inf.darts.manager.CreateFolder;
+import hu.unideb.inf.darts.manager.CreateFolder;
+import hu.unideb.inf.darts.manager.Reader;
+import hu.unideb.inf.darts.manager.Reader;
+import hu.unideb.inf.darts.manager.Registration;
+import hu.unideb.inf.darts.manager.Registration;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -60,11 +62,11 @@ public class FXMLRegistration implements Initializable {
     @FXML
     private void backAction(ActionEvent event) throws IOException {
         MainApp.stage = (Stage) backButton.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/start.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLOptions>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/start.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLOptions>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
 

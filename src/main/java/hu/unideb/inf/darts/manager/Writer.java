@@ -6,9 +6,12 @@
 /**
  * hu.unideb.inf.darts csomag magában tartalmazza a működéshez szükséges fájlokat.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.manager;
 
-import hu.unideb.inf.darts.ManagerImpl;
+import hu.unideb.inf.darts.model.Darts;
+import hu.unideb.inf.darts.model.User;
+import hu.unideb.inf.darts.model.Users;
+import hu.unideb.inf.darts.manager.ManagerImpl;
 import java.io.File;
 import java.util.ArrayList;
 import javax.xml.bind.JAXBContext;

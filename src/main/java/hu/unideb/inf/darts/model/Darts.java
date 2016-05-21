@@ -1,5 +1,5 @@
 
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.model;
 /**
  * Egy {@code Darts} jatákot reprezentáló osztály.
  * @author Ak

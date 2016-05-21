@@ -1,5 +1,5 @@
 
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

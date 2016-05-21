@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hu.unideb.inf.darts;
+package hu.unideb.inf.darts.controller;
 
-import hu.unideb.inf.darts.MainApp;
+import hu.unideb.inf.darts.manager.ManagerImpl;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -135,11 +135,11 @@ public class FXMLOptions implements Initializable {
         m.setLeg(legs,m.getDarts());
 
         MainApp.stage = (Stage) nextButton.getScene().getWindow();
-        MainApp.loader = new FXMLLoader(getClass().getResource("/fxml/gameOnScene.fxml"));
-        MainApp.root = MainApp.loader.load();
-        MainApp.loader.<FXMLGameOnScene>getController();
-        MainApp.scene = new Scene(MainApp.root);
-        MainApp.stage.setScene(MainApp.scene);
+        MainApp.setLoader(new FXMLLoader(getClass().getResource("/fxml/gameOnScene.fxml")));
+        MainApp.setRoot(MainApp.getLoader().load());
+        MainApp.getLoader().<FXMLGameOnScene>getController();
+        MainApp.setScene(new Scene(MainApp.getRoot()));
+        MainApp.stage.setScene(MainApp.getScene());
         MainApp.stage.show();
     }
 

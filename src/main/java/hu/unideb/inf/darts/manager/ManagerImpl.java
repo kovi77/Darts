@@ -1,4 +1,3 @@
-
 /**
  * hu.unideb.inf.darts csomag magában tartalmazza a működéshez szükséges fájlokat.
  */

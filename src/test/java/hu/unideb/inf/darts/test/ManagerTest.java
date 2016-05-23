@@ -121,7 +121,6 @@ public class ManagerTest {
         
     }
     
-    
     @Test
     public void setPlayer() {
         m.setPlayer("Player1", u1, u2, m.getDarts());

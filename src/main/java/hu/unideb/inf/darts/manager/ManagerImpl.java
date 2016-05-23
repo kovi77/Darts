@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 public class ManagerImpl implements Manager {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(ManagerImpl.class);
     static Darts darts = new Darts();
-
     /**
      * Ideiglenes Játékos.
      */

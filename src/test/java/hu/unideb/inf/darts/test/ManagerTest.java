@@ -34,7 +34,6 @@ public class ManagerTest {
     public ManagerTest() {
     }
 
-
     @Test
     public void calc() {
         //1.Játékos

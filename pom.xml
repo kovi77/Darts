@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>Darts-1.1</artifactId>
+    <artifactId>Darts</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 

@@ -31,10 +31,11 @@
     </scm>
     <licenses>
         <license>
-            <name>MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
+            <name>GNU GPL v3</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+            <distribution>repo</distribution>
         </license>
-    </licenses>
+    </licenses
     
     <dependencies>
         <dependency>

@@ -1,0 +1,51 @@
+13:03:49.876 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:03:49.881 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ pontszám: 501
+13:03:49.883 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:03:49.883 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:03:49.884 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Legek száma: 3
+13:03:49.885 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos 0-t dobott
+13:03:49.885 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos túl dobott
+13:03:49.885 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos 0-t dobott
+13:03:49.885 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos túl dobott
+13:03:49.886 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:03:49.887 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:03:49.887 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:03:49.887 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:03:49.887 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos nyert
+13:03:49.887 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Végeredmények beállításra kerültek
+13:04:16.537 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:04:16.541 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ pontszám: 501
+13:04:16.543 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:04:16.544 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:04:16.545 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos 0-t dobott
+13:04:16.545 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos túl dobott
+13:04:16.545 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos 0-t dobott
+13:04:16.545 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos túl dobott
+13:04:16.546 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:04:16.546 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:04:16.546 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:04:16.546 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:04:16.547 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:04:16.547 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos nyerte a leget
+13:04:16.547 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:04:16.547 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:04:16.547 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Végeredmények beállításra kerültek
+13:04:16.548 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Legek száma: 3
+13:13:48.006 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:13:48.014 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ pontszám: 501
+13:13:48.016 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos 0-t dobott
+13:13:48.017 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos túl dobott
+13:13:48.017 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos 0-t dobott
+13:13:48.017 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos túl dobott
+13:13:48.018 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:13:48.018 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:13:48.018 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:13:48.018 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:13:48.019 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:13:48.019 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 2.Játékos nyerte a leget
+13:13:48.019 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Új leg kezdõdött
+13:13:48.019 [main] INFO  h.u.inf.darts.manager.ManagerImpl - 1.Játékos nyerte a leget
+13:13:48.019 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Végeredmények beállításra kerültek
+13:13:48.020 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:13:48.021 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Kezdõ játékos beállítva
+13:13:48.022 [main] INFO  h.u.inf.darts.manager.ManagerImpl - Legek száma: 3

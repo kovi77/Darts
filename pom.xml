@@ -7,7 +7,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Darts-1.1</name>
+    <name>Darts</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,7 +35,7 @@
             <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
             <distribution>repo</distribution>
         </license>
-    </licenses
+    </licenses>
     
     <dependencies>
         <dependency>

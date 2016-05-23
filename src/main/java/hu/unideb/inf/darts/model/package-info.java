@@ -15,6 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * A {@code Darts} játékhoz szükséges osztályokat tartalmazza.
+ * A {@code Darts} játékot reprezentáló osztályait tartalmazza.
  */
 package hu.unideb.inf.darts.model;

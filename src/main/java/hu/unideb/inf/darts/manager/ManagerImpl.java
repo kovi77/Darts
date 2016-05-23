@@ -96,11 +96,11 @@ public class ManagerImpl implements Manager {
                     highScore1 = highScore1 + num;
                     p1Counter++;
                 } else {
-                    if (darts.getPlayer1().getScore() < num1) {
+                    if (darts.getPlayer1().getScore() < num1 && num2 ==0 && num3 == 0) {
                         darts.getPlayer1().setScore((darts.getPlayer1().getScore()));
                         logger.info("1.Játékos túl dobott");
                     }
-                    if (darts.getPlayer1().getScore() < num2) {
+                    if (darts.getPlayer1().getScore() < num2 && num3 == 0) {
                         darts.getPlayer1().setScore((darts.getPlayer1().getScore()) + num1);
                         logger.info("1.Játékos túl dobott");
                     }
@@ -137,11 +137,11 @@ public class ManagerImpl implements Manager {
                     highScore2 = highScore2 + num;
                     p2Counter++;
                 } else {
-                    if (darts.getPlayer2().getScore() < num4) {
+                    if (darts.getPlayer2().getScore() < num4 && num5 == 0 && num6 == 0) {
                         darts.getPlayer2().setScore((darts.getPlayer2().getScore()));
                         logger.info("2.Játékos túl dobott");
                     }
-                    if (darts.getPlayer2().getScore() < num5) {
+                    if (darts.getPlayer2().getScore() < num5 && num6 == 0) {
                         darts.getPlayer2().setScore((darts.getPlayer2().getScore()) + num4);
                         logger.info("2.Játékos túl dobott");
                     }

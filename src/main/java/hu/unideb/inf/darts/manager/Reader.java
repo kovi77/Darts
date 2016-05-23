@@ -73,9 +73,9 @@ public class Reader {
                 }
 
             }
-            logger.error("Beolvasás sikeres");
+            logger.info("Beolvasás sikeres");
         } catch (ParserConfigurationException ex) {
-            logger.error("Beolvasás sikertelen");
+            logger.info("Beolvasás sikertelen");
             Logger.getLogger(Darts.class.getName()).log(Level.SEVERE, null, ex);
         }
         

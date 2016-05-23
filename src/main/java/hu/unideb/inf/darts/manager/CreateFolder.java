@@ -42,10 +42,10 @@ public class CreateFolder {
             file = new File(path+"darts.xml");
 
             if (file.createNewFile()) {
-                logger.error("Fájl létrehozva");
+                logger.info("Fájl létrehozva");
                 writeDefault();
             } else {
-                logger.error("Fájl létezik");
+                logger.info("Fájl létezik");
             }
         
     }

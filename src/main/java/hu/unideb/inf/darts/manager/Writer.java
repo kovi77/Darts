@@ -53,7 +53,7 @@ public class Writer {
                 users.getUsers().get(i).setCounter3(darts.getPlayer1().getCounter3());
                 users.getUsers().get(i).setWonMatches(darts.getPlayer1().getWonMatches());
                 check1 = true;
-                logger.info("Már regisztált felhasználó");
+                logger.info("Már regisztrált felhasználó");
             }
         }
         if (!check1) {
@@ -79,7 +79,7 @@ public class Writer {
                 users.getUsers().get(i).setCounter3(darts.getPlayer2().getCounter3());
                 users.getUsers().get(i).setWonMatches(darts.getPlayer2().getWonMatches());
                 check2 = true;
-                logger.info("Már regisztált felhasználó");
+                logger.info("Már regisztrált felhasználó");
             }
         }
         if (!check2) {

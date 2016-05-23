@@ -49,7 +49,7 @@ public class Login {
                     player1.setCounter3(user.getCounter3());
                     player1.setWonMatches(user.getWonMatches());
                     ch1 = true;
-                    logger.info("Regisztált játékos");
+                    logger.info("Regisztrált játékos");
                 }
             }
             for (User user : users.getUsers()) {
@@ -63,22 +63,22 @@ public class Login {
                     player2.setCounter3(user.getCounter3());
                     player2.setWonMatches(user.getWonMatches());
                     ch2 = true;
-                    logger.info("Regisztált játékos");
+                    logger.info("Regisztrált játékos");
                 }
             }
             invalidName = "";
             check1 = ch2 && ch1;
             if (!ch1) {
                 invalidName = "Player 1 not registered";
-                logger.warn("Első játékos nem regisztált");
+                logger.warn("Első játékos nem regisztrált");
             }
             if (!ch2) {
                 invalidName = "Player 2 not registered";
-                logger.warn("Második játékos nem regisztált");
+                logger.warn("Második játékos nem regisztrált");
             }
             if (!ch1 && !ch2) {
                 invalidName = "Non-registered players";
-                logger.warn("Nem regisztált játékosok");
+                logger.warn("Nem regisztrált játékosok");
             }
         } else {
             invalidName = "Invalid Name";

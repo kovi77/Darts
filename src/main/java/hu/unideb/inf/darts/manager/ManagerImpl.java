@@ -19,7 +19,6 @@ public class ManagerImpl implements Manager {
      * Ideiglenes Játékos.
      */
     public static User player1 = new User("A");
-
     /**
      * Ideiglenes Játékos.
      */
